@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitud de Permiso</title>
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      margin: 0;
+      padding: 0;
+      color: rgba(0,0,0,0.85);
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 16px 0;
+    }
+    .info span {
+      font-weight: 600;
+    }
+    .estado {
+      padding: 8px 12px;
+      border-radius: 12px;
+      font-weight: 600;
+      display: inline-block;
+      color: #fff;
+      text-transform: capitalize;
+    }
+    .pendiente { background-color: #ffa726; }
+    .aprobado { background-color: #66bb6a; }
+    .rechazado { background-color: #ef5350; }
+    .neutral { background-color: #9e9e9e; }
+    .footer {
+      margin-top: 24px;
+      font-size: 14px;
+      color: rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Solicitud de Permiso</h1>
+    <p>Hola, se ha recibido una nueva solicitud de permiso de un empleado.</p>
+    
+    <div class="info">
+      <span>Empleado:</span> {{nombreEmpleado}}
+      <span>Tipo de Permiso:</span> {{tipoPermiso}}
+      <span>Fecha de Solicitud:</span> {{fechaSolicitud}}
+      <span>Motivo:</span> {{motivo}}
+      <span>Estatus:</span> <span class="estado pendiente">{{estatus}}</span>
+    </div>
+
+    <p>Por favor, revisa y gestiona la solicitud desde el panel de administración.</p>
+
+    <div class="footer">
+      Este es un mensaje automático del Sistema de Gestión de Permisos.
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Retardo</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 40px auto;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        text-align: center;
+        padding: 20px 30px;
+      }
+
+      .content {
+        padding: 30px;
+      }
+
+      .content p {
+        margin: 12px 0;
+        line-height: 1.6;
+      }
+
+      .highlight {
+        color: #764ba2;
+        font-weight: bold;
+      }
+
+      .footer {
+        background: #f1f1f1;
+        padding: 15px 30px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #555;
+        border-top: 1px solid #ddd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Registro de Retardo</h2>
+      </div>
+
+      <div class="content">
+        <p>Hola <strong>{{nombreEmpleado}}</strong>,</p>
+
+        <p>
+          Se ha registrado un <strong>retardo de {{minutosRetraso}} minutos</strong> el día
+          <span class="highlight">{{fecha}}</span>.
+        </p>
+
+        <p><strong>Clasificación:</strong> {{tipo}}</p>
+        <p><strong>Descripción:</strong> {{descripcion}}</p>
+        <p><strong>Multa:</strong> {{montoTexto}}</p>
+
+        <p style="margin-top: 20px">
+          Por favor, evita reincidencias para no escalar sanciones.
+        </p>
+
+        <p>Atentamente,<br /><strong>Departamento de Recursos Humanos</strong></p>
+      </div>
+
+      <div class="footer">
+        Este es un mensaje automático. No respondas a este correo.
+      </div>
+    </div>
+  </body>
+</html>

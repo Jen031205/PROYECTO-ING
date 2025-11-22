@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualización de Permiso</title>
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      margin: 0;
+      padding: 0;
+      color: rgba(0,0,0,0.85);
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 16px;
+    }
+    .estado {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      color: #fff;
+      text-transform: capitalize;
+      margin-top: 8px;
+      margin-bottom: 16px;
+    }
+    .aprobado { background-color: #66bb6a; }
+    .rechazado { background-color: #ef5350; }
+    .pendiente { background-color: #ffa726; }
+    p {
+      font-size: 16px;
+      margin: 6px 0;
+    }
+    .footer {
+      margin-top: 24px;
+      font-size: 14px;
+      color: rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Actualización de tu Permiso</h1>
+    <p><strong>Hola {{nombreEmpleado}},</strong></p>
+    <p>Tu solicitud de permiso ha sido <span class="estado {{estatusClass}}">{{estatus}}</span> por el director.</p>
+
+    <p><strong>Tipo de Permiso:</strong> {{tipoPermiso}}</p>
+    <p><strong>Fecha de Solicitud:</strong> {{fechaSolicitud}}</p>
+    <p><strong>Fecha de Inicio:</strong> {{fechaInicio}}</p>
+    <p><strong>Motivo:</strong> {{motivo}}</p>
+    <p><strong>Observaciones del Director:</strong> {{observaciones}}</p>
+
+    <div class="footer">
+      Este es un mensaje automático del Sistema de Gestión de Permisos.
+    </div>
+  </div>
+</body>
+</html>

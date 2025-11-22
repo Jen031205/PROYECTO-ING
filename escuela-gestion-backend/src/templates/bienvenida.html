@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenido al Sistema</title>
+    <style>
+      body {
+        font-family: 'Inter', Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 40px auto;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        color: #333;
+      }
+
+      h1 {
+        font-size: 2rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 12px 0;
+      }
+
+      .button {
+        display: inline-block;
+        margin-top: 24px;
+        padding: 12px 24px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .footer {
+        margin-top: 32px;
+        font-size: 0.875rem;
+        text-align: center;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>¡Bienvenido al Panel de Gestión de Permisos!</h1>
+      <p>Hola <strong>{{nombre}}</strong>,</p>
+      <p>
+        Tu cuenta ha sido creada exitosamente en el sistema. Ya puedes acceder al
+        panel con tu correo: <strong>{{correo}}</strong>.
+      </p>
+      <p>
+        A través de esta plataforma podrás solicitar permisos, consultar tu
+        historial y mantener una comunicación directa con tu dirección o
+        departamento de recursos humanos.
+      </p>
+      <a href="{{url_sistema}}" class="button">Ir al Panel</a>
+      <p class="footer">
+        © 2025 Panel de Gestión de Permisos — Desarrollado para un entorno eficiente y profesional.
+      </p>
+    </div>
+  </body>
+</html>

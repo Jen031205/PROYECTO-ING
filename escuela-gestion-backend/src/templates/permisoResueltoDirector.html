@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Permiso Revisado por RH</title>
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      margin: 0; padding: 0; color: rgba(0,0,0,0.85);
+    }
+    .container {
+      max-width: 600px; margin: 40px auto;
+      background: #fff; border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      padding: 24px; text-align: center;
+    }
+    h1 {
+      font-size: 26px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      color: transparent; margin-bottom: 16px;
+    }
+    .estado {
+      display: inline-block; padding: 8px 16px;
+      border-radius: 12px; font-weight: 600;
+      color: #fff; text-transform: capitalize;
+      margin: 8px 0 16px;
+    }
+    .aprobado { background-color: #43a047; }
+    .rechazado { background-color: #e53935; }
+    p { font-size: 15px; margin: 6px 0; }
+    .footer {
+      margin-top: 24px; font-size: 13px; color: rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Permiso Revisado por Recursos Humanos</h1>
+    <p>Recursos Humanos ha <span class="estado {{estatusClass}}">{{estatus}}</span> la solicitud del empleado <strong>{{nombreEmpleado}}</strong>.</p>
+
+    <p><strong>Tipo:</strong> {{tipoPermiso}}</p>
+    <p><strong>Fecha de Solicitud:</strong> {{fechaSolicitud}}</p>
+    <p><strong>Fecha de Inicio:</strong> {{fechaInicio}}</p>
+    <p><strong>Motivo:</strong> {{motivo}}</p>
+    <p><strong>Comentarios de RH:</strong> {{comentario}}</p>
+
+    <div class="footer">
+      Sistema de Gestión de Permisos — Notificación Automática
+    </div>
+  </div>
+</body>
+</html>
